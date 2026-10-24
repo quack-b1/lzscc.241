@@ -1,14 +1,14 @@
 import os
 from dotenv import load_dotenv
 from google import genai
+from config import SELECTED_MODEL
 
-# Load environment variables from .env file
 load_dotenv()
 
+
 class GeminiBackend:
-    def __init__(self, model_name="gemini-3.6-flash"):
+    def __init__(self, model_name=SELECTED_MODEL):
         self.model_name = model_name
-        # Explicitly pull the key from environment variables
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
             raise ValueError("GEMINI_API_KEY not found in environment variables or .env file.")
