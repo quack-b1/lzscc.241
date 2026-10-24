@@ -21,6 +21,8 @@ class GeminiBackend:
                 model=self.model_name,
                 contents=prompt,
             )
-            return response.text.strip()
+            if response and response.text:
+                return response.text.strip()
+            return "Error: Empty response received."
         except Exception as e:
             return f"Error: {str(e)}"
