@@ -1,0 +1,19 @@
+[
+    {"id": 1, "category": "unclear", "prompt": "Book it for tomorrow."},
+    {"id": 2, "category": "unclear", "prompt": "Schedule the meeting."},
+    {"id": 3, "category": "unclear", "prompt": "Update the file."},
+    {"id": 4, "category": "unclear", "prompt": "Order the usual."},
+    {"id": 5, "category": "unclear", "prompt": "Send the email."},
+    
+    {"id": 6, "category": "unanswerable", "prompt": "Write a 10-word summary that includes these 15 specific words: apple, banana, cherry, date, elderberry, fig, grape, honeydew, kiwi, lemon, mango, nectarine, orange, papaya, quince."},
+    {"id": 7, "category": "unanswerable", "prompt": "Tell me what I am currently thinking right now."},
+    {"id": 8, "category": "unanswerable", "prompt": "What will the exact stock price of Apple be on October 24, 2035?"},
+    {"id": 9, "category": "unanswerable", "prompt": "List all zero prime numbers in ascending order."},
+    {"id": 10, "category": "unanswerable", "prompt": "Describe the sound of the color blue in exact mathematical terms without using any adjectives."},
+    
+    {"id": 11, "category": "simple", "prompt": "What is 2 + 2? Answer with only the number."},
+    {"id": 12, "category": "simple", "prompt": "Translate 'Hello' into French."},
+    {"id": 13, "category": "simple", "prompt": "Name the capital of France."},
+    {"id": 14, "category": "simple", "prompt": "Is water a liquid at room temperature? Answer yes or no."},
+    {"id": 15, "category": "simple", "prompt": "What color is a clear daytime sky?"}
+]
