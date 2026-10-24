@@ -15,7 +15,7 @@ def run_evaluation():
     with open(PROMPTS_FILE, "r", encoding="utf-8") as f:
         test_prompts = json.load(f)
 
-    backend = GeminiBackend(model_name="gemini-3.8-flash")
+    backend = GeminiBackend(model_name="gemini-3.6-flash")
     results = []
     
     print(f"Starting test run using Gemini ({REPEATS} repeats per prompt)...")
@@ -38,7 +38,7 @@ def run_evaluation():
                 "repeat": rep,
                 "response": response,
                 "latency_seconds": round(duration, 3),
-                "model": "gemini-2.5-flash"
+                "model": "gemini-3.6-flash"
             })
             # Brief pause to respect rate limits
             time.sleep(0.5)
