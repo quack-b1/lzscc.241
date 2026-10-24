@@ -2,7 +2,7 @@
 
 ## 1 · Define: rules and criteria
 
-**Question.** When a request is unclear, or cannot be answered, does the model hand control back to the human, or does it guess on our behalf?
+When a request is unclear or unanswerable, does the model hand control back to the human, or does it guess on our behalf?
 
 Inspired by guideline 10 ("Scope services when in doubt") and guideline 2 ("Make clear how well the system can do what it can do") from Amershi et al. (2019).
 
