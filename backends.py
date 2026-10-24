@@ -6,7 +6,7 @@ from google import genai
 load_dotenv()
 
 class GeminiBackend:
-    def __init__(self, model_name="gemini-2.5-flash"):
+    def __init__(self, model_name="gemini-3.8-flash"):
         self.model_name = model_name
         # automatically checks os.environ["GEMINI_API_KEY"]
         self.client = genai.Client()

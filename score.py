@@ -50,7 +50,7 @@ def compute_scores():
         print(f"Category '{cat}': {score_pct:.1f}% pass rate ({stats['passed']}/{stats['total']})")
         
     print("="*40)
-    print("Note: Perform a manual qualitative review on at least 20 items as per project criteria[cite: 19].")
+    print("Note: Perform a manual qualitative review on at least 20 items.")
 
 if __name__ == "__main__":
     compute_scores()
