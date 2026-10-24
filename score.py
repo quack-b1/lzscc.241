@@ -1,4 +1,4 @@
-import json #tester
+import json
 import os
 
 RESULTS_FILE = "test_results.json"
