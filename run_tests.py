@@ -5,7 +5,7 @@ from backends import ModelBackend
 from config import REPEATS, DELAY_SECONDS, SELECTED_MODEL, PROVIDER
 
 PROMPTS_FILE = "prompts.json"
-OUTPUT_FILE = "test_results.json"
+OUTPUT_FILE = f"test_results_{PROVIDER}.json"
 
 
 def run_evaluation():
