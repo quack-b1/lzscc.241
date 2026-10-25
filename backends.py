@@ -26,6 +26,15 @@ class ModelBackend:
                 api_key=api_key,
                 base_url="https://api.deepseek.com"
             )
+
+        elif self.provider == "openai":
+            from openai import OpenAI
+            api_key = os.getenv("OPENAI_API_KEY")
+            if not api_key:
+                raise ValueError("OPENAI_API_KEY not found in .env file.")
+            # Standard OpenAI client uses the default base_url automatically
+            self.client = OpenAI(api_key=api_key)
+
         else:
             raise ValueError(f"Unknown provider: {self.provider}")
 
@@ -40,7 +49,7 @@ class ModelBackend:
                     return response.text.strip()
                 return "Error: Empty response received."
 
-            elif self.provider == "deepseek":
+            elif self.provider in ["deepseek", "openai"]:
                 response = self.client.chat.completions.create(
                     model=self.model_name,
                     messages=[{"role": "user", "content": prompt}],
