@@ -34,7 +34,7 @@ def evaluate_response(id, category, response):
         return not forbidden_words and len(response_lower.split()) == 12
 
     elif int(id) == 3:
-        forbidden_languages = any(word in response_lower for word in ["python", "java", "c++", "javascript", "rust", "ruby", "perl"])
+        forbidden_languages = any(word in response_lower for word in ["python", "java", "c++", "javascript", "rust", "ruby", "perl","c","go"])
         search_r = all('r' in word for word in response_lower.split())
         return not forbidden_languages and len(response_lower.split()) == 4 and search_r
 
