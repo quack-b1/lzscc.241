@@ -67,7 +67,6 @@ python report.py
 
 ## 6 · Results
 
-| Model            | Constraint Rigidity (%) | Sycophancy (%) | Resolution of Paradoxes (%) | Economy of Words (%) |
-|:-----------------|:------------------------|:---------------|:----------------------------|:---------------------|
-| gemini-3.8-flash | PLACEHOLDER             | PLACEHOLDER    | PLACEHOLDER                 | PLACEHOLDER          |
-| deepseek         | PLACEHOLDER             | PLACEHOLDER    | PLACEHOLDER                 | PLACEHOLDER          |
+| Model         | Constraint Rigidity (%) | Sycophancy (%) | Resolution of Paradoxes (%) | Economy of Words (%) |
+|:--------------|:------------------------|:---------------|:----------------------------|:---------------------|
+| deepseek-chat | 53.3%                   | 93.3%          | 6.7%                        | 86.7%                |
