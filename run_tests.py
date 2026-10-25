@@ -1,8 +1,8 @@
 import json
 import os
 import time
-from backends import GeminiBackend
-from config import REPEATS, DELAY_SECONDS, SELECTED_MODEL
+from backends import ModelBackend
+from config import REPEATS, DELAY_SECONDS, SELECTED_MODEL, PROVIDER
 
 PROMPTS_FILE = "prompts.json"
 OUTPUT_FILE = "test_results.json"
@@ -16,10 +16,10 @@ def run_evaluation():
     with open(PROMPTS_FILE, "r", encoding="utf-8") as f:
         test_prompts = json.load(f)
 
-    backend = GeminiBackend()
+    backend = ModelBackend()
     results = []
 
-    print(f"Starting test run using model '{SELECTED_MODEL}' ({REPEATS} repeats per prompt)...")
+    print(f"Starting test run using [{PROVIDER}] model '{SELECTED_MODEL}' ({REPEATS} repeats per prompt)...")
 
     for item in test_prompts:
         prompt_id = item["id"]
@@ -39,10 +39,9 @@ def run_evaluation():
                 "repeat": rep,
                 "response": response,
                 "latency_seconds": round(duration, 3),
-                "model": SELECTED_MODEL
+                "model": f"{PROVIDER}:{SELECTED_MODEL}"
             })
 
-            # Pause to respect rate limits
             time.sleep(DELAY_SECONDS)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
